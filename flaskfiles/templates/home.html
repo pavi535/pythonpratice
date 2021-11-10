@@ -1,0 +1,15 @@
+{% extends "common.html" %}
+{% block content %}
+    {% for post in posts %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ post.Product_name }}</a>
+              <small class="text-muted">{{ post.car_make }}</small>
+            </div>
+            <h2><a class="article-title" href="#">{{ post.car_year }}</a></h2>
+            <p class="article-content">{{ post.car_description }}</p>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
